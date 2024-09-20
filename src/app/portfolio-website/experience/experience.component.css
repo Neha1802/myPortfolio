@@ -119,6 +119,12 @@
     font-size: 3vw;
     font-weight: 400;
 }
+.linkWork{
+    cursor: pointer;
+}
+.linkWork:hover{
+    cursor: pointer;
+}
 /* Resposniveness */
 
 @media screen and (min-width: 400px) and (max-width: 900px){
