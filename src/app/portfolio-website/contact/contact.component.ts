@@ -21,7 +21,7 @@ export class ContactComponent {
 
   constructor(private fb: FormBuilder, private toastr: ToastrService, private route: ActivatedRoute){
     this.contactForm =  this.fb.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required, Validators.minLength(7)]],
       email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       message: ['', [Validators.required, Validators.minLength(10)]]
     });
@@ -38,6 +38,6 @@ export class ContactComponent {
   }
   isFieldInvalid(fieldName: string): boolean {
     const control = this.contactForm.get(fieldName);
-    return !!(control?.invalid && (control.dirty || control.touched));
+    return !!(control?.invalid && (control.dirty || control.touched) && control.value);
   }
 }

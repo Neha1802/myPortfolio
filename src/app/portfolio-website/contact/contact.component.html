@@ -19,7 +19,7 @@
                     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                         <label id="name">Full Name</label>
                         <input formControlName="name" placeholder="Your Name">
-                        @if (isFieldInvalid('name')) {<div class="errorMessage">Name is required.</div>}
+                        @if (isFieldInvalid('name')) {<div class="errorMessage">Name is required and should be at least 7 characters long.</div>}
                         <label id="mail">Email</label>
                         <input type="email" formControlName="email" placeholder="Email">
                         @if (isFieldInvalid('email')) {<div class="errorMessage">Please enter a valid email address.
