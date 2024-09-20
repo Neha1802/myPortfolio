@@ -11,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SkillsComponent {
 
-  currentIndex = 0;
-
+  currentIndexSkills: number = 0;
+  currentIndexTools: number = 0;
 
   constructor(private route: ActivatedRoute){
     this.route.fragment.subscribe((fragment) => {
@@ -25,30 +25,58 @@ export class SkillsComponent {
         }, 0);
       }
     });
+    
   }
 
  
   images = [
-    { src: 'angular.png', title: 'Angular', description: 'Expert in Angular, a framework used to build dynamic and responsive web applications. ' },
+    { src: 'typeS.jpg', title: 'Typescript', description: 'Used while creating components, services, and directives with strong typing to ensure code reliability and maintainability. ' },
     { src: 'js.png', title: 'Javascript', description: 'Skilled in JavaScript and TpeScript for adding interactivity to web applications.' },
-    { src: 'html.png', title: 'HTML', description: 'Proficient in HTML for structuring and organizing web content. Adept at creating clean, semantic markup to ensure a solid foundation for web pages.' },
+    { src: 'html.png', title: 'HTML', description: 'Proficient in HTML for structuring and organizing web content.' },
     { src: 'css.png', title: 'CSS', description: 'Experienced in CSS for designing and styling web pages.' },
-    { src: 'git.png', title: 'Git', description: 'Proficient in Git for version control and collaboration.' }
+    { src: 'rxjs.png', title: 'RxJS', description: 'Used in Angular for managing asynchronous data streams and events.' }
+  ];
+  imagesTools = [
+    { src: 'angular.png', title: 'CLI', description: 'Expert in Angular, a framework used to build dynamic and responsive web applications. ' },
+    { src: 'nodeJs.png', title: 'Node.js', description: 'Used to run the Angular CLI and other development tools. Used npm to manage Angular’s dependencies and 3rd-party libraries.' },
+    { src: 'postman.png', title: 'Postman', description: 'Used for testing API endpoints that are consumed by Angular services.' },
+    { src: 'netlify.png', title: 'Netlify', description: 'Used for deployment of Angular apps.' },
+    { src: 'bitbucket.png', title: 'BitBucket', description: 'Git repository hosting service that allows to manage Angular project. Used to track changes, collaborate with team members.' },
+    { src: 'jira.png', title: 'Jira', description: 'Used for Agile methodologies (Scrum), allowing to manage sprints, backlogs, and track progress using boards and charts.' },
+    { src: 'git.png', title: 'Git', description: 'Proficient in Git for version control and collaboration.' },
+    { src: 'azureDevops.png', title: 'Azure Devops', description: 'Azure Boards helped manage tasks, bugs, and user stories through Agile methodologies.' }
   ];
 
-  next() {
-    if (this.currentIndex < this.images.length - 1) {
-      this.currentIndex++;
+
+  nextArrow() {
+    if (this.currentIndexSkills < this.images.length - 1) {
+      this.currentIndexSkills++;
     } else {
-      this.currentIndex = 0; // Loop back to the first image
+      this.currentIndexSkills = 0;
     }
   }
 
-  previous() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
+  previousArrow() {
+    if (this.currentIndexSkills > 0) {
+      this.currentIndexSkills--;
     } else {
-      this.currentIndex = this.images.length - 1; // Loop back to the last image
+      this.currentIndexSkills = this.images.length - 1;
+    }
+  }
+
+  nextArrow2() {
+    if (this.currentIndexTools < this.imagesTools.length - 1) {
+      this.currentIndexTools++;
+    } else {
+      this.currentIndexTools = 0;
+    }
+  }
+
+  previousArrow2() {
+    if (this.currentIndexTools > 0) {
+      this.currentIndexTools--;
+    } else {
+      this.currentIndexTools = this.imagesTools.length - 1;
     }
   }
 }

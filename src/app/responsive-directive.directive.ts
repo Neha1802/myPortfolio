@@ -16,10 +16,8 @@ export class ResponsiveDirectiveDirective {
     ]).subscribe(result => {
       if (result.matches) {
         this.setClass('mobile');
-        console.log("Mobile screen detected (<= 740px)");
       } else {
         this.setClass('desktop');
-        console.log("Screen wider than 740px");
       }
     });
   }
