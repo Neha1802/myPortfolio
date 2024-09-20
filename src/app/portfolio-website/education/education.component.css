@@ -1,0 +1,102 @@
+/* Education */
+.box {
+    background-image: linear-gradient(to right, #6d6c6adb, #6d6c6adb);
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+.education {
+    padding: 10px 0 50px 0;
+}
+
+
+.container {
+    padding: 10px 10% 30px 10%;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+/* When the element is in view (after scroll) */
+.education.in-view .container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.eduList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.eduList div {
+    background: #491f1fb5;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-right: 10px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.eduList div i {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.eduList div h3 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.eduList div h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.eduList div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+.learn {
+    color: aqua;
+}
+
+.learn:hover {
+    color: #ffff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 524px){
+    .sub-title{
+        text-align: center;
+        font-size: 8vw;
+    }
+    
+}
+@media screen  and (max-width: 288px) {
+    .eduList div h3 {
+        font-size: 8vw;
+    }
+}
+@media screen  and (min-width: 289px) and (max-width: 424px) {
+    .eduList div h3 {
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 425px) and (max-width: 1119px){
+    .eduList div h2 {
+        font-size: 2vw;
+    }
+    .eduList div h3 {
+        font-size: 3vw;
+    }
+}

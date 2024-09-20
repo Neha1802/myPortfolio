@@ -1,0 +1,43 @@
+<div class="box" appResponsiveDirective>
+    <div class="navbar">
+        <mat-toolbar color="primary" class="toolbar">
+            <mat-toolbar-row>
+                <span class="logo" (click)="home()"><img src="img2.png" class="img" alt="img">My Portfolio</span>
+                <span class="spacer"></span>
+                <div class="menu-toggle">
+                    <button mat-icon-button (click)="snav.toggle();">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </div>
+
+                <div class="sectionLinks">
+                    <a (click)="home()">Home</a>
+                    <a (click)="about()">About</a>
+                    <a (click)="education()">Education</a>
+                    <a (click)="skills()">Skills</a>
+                    <a (click)="workExp()">Work Experience</a>
+                    <a (click)="contact()">Contact</a>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-sidenav-container class="sidenav-container">
+            <mat-sidenav #snav mode="side">
+                <mat-nav-list>
+                    <a (click)="home()">Home</a>
+                    <a (click)="about()">About</a>
+                    <a (click)="education()">Education</a>
+                    <a (click)="skills()">Skills</a>
+                    <a (click)="workExp()">Work Experience</a>
+                    <a (click)="contact()">Contact</a>
+                </mat-nav-list>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <div [@routeTransition]="route.snapshot.data" style="display: contents;">
+                    <router-outlet></router-outlet>
+                </div>
+                <app-footer appResponsiveDirective></app-footer>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>

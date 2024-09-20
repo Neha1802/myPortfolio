@@ -1,0 +1,14 @@
+/* copyright */
+.copyright{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 300;
+    background: #b5a69c;
+    border: 1px solid #514a4a;
+}
+.copyright i{
+    color: #ff004f;
+}

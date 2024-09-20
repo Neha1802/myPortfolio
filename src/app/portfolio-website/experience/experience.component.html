@@ -1,0 +1,97 @@
+<div class="box">
+    <!-- Experiene section -->
+    <div id="workExp" class="workExp">
+        <div class="container">
+            <h1 class="sub-title">Work Experience</h1>
+            <div class="workList" *ngIf="!exp1 && !exp2 && !exp3 ">
+                <div class="work">
+                    <img src="exp1.jpg">
+                    <div class="layer">
+                        <h3>WalkingTree Technologies</h3>
+                        <h4>Software Engineer</h4>
+                        <p>(Oct 2023 - Feb 2024)</p>
+                        <a (click)="showExp1()"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="exp2.jpg">
+                    <div class="layer">
+                        <h3>Sudofire Technologies</h3>
+                        <h4>Frontend Developer</h4>
+                        <p>(Jan 2022 - Oct 2023)</p>
+                        <a (click)="showExp2()"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="exp3.jpg">
+                    <div class="layer">
+                        <h3>QuantsApp Ltd.</h3>
+                        <h4>Frontend Developer</h4>
+                        <p>(Sept 2021 - Dec 2021)</p>
+                        <a (click)="showExp3()"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="work">
+                <div class="seeMoreContainer" *ngIf="exp1">
+                    <h2>Project</h2>
+                    <h3>Strategen Web Application</h3>
+                    <ul>
+                        <li>
+                            Implemented virtual well creation for mining.
+                        </li>
+                        <li>
+                            Created and managed navbar items and sub-menu.
+                        </li>
+                        <li>
+                            Utilised Material UI and PrimeNG for the user interface.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="work">
+                <div class="seeMoreContainer" *ngIf="exp2">
+                    <h2>Project</h2>
+                    <h3>Tata Digital Platform Web Application</h3>
+                    <ul>
+                        <li>
+                            Created and managed a visualisation dashboard module from scratch with unctionalities
+                            (Create, Edit, Delete) and various widgets (Charts, Maps,
+                            Table, Summary).
+                        </li>
+                        <li>
+                            Replaced UI for CODEC creation with a recursive UI and nested key variables with reactive
+                            forms having save draft facility.
+                        </li>
+                        <li>
+                            Utilised Material UI to enhance components like Device List and Device Details pages.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="work">
+                <div class="seeMoreContainer" *ngIf="exp3">
+                    <h2>Project</h2>
+                    <h3>Stock and Nifty Web Application</h3>
+                    <ul>
+                        <li>
+                            Added Angular CDK drag-and-drop functionality for interactive graph representations.
+                        </li>
+                        <li>
+                            Implemented mobile responsiveness with a service file storing different screen sizes as
+                            Observables.
+                        </li>
+                        <li>
+                            Enhanced product efficiency using ngClasses, Angular Material, and map/filter
+                            functionalities
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <a class="btn" (click)="back()" *ngIf="exp1 || exp2 || exp3">Back</a>
+        </div>
+    </div>
+</div>
