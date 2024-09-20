@@ -1,0 +1,40 @@
+<div class="box">
+    <!-- Contact section -->
+    <div id="contact" class="contact">
+        <div class="container">
+            <div class="contactDetails">
+                <div class="contactLeft">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p class="contDetails"><i class="fa-solid fa-phone"></i>contact&#64;example.com</p>
+                    <p class="contDetails"><i class="fa-solid fa-envelope"></i>+91473998XXX8</p>
+                    <div class="socialIcons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <a href="resume.pdf" download class="btnDownload"> <i class="fa-solid fa-download m-2"></i> Download Resume</a>
+                </div>
+                <div class="contactRight">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <label id="name">Full Name</label>
+                        <input formControlName="name" placeholder="Your Name">
+                        @if (isFieldInvalid('name')) {<div class="errorMessage">Name is required.</div>}
+                        <label id="mail">Email</label>
+                        <input type="email" formControlName="email" placeholder="Email">
+                        @if (isFieldInvalid('email')) {<div class="errorMessage">Please enter a valid email address.
+                        </div>}
+                        <label id="mssg">Message</label>
+                        <textarea formControlName="message" rows="6" placeholder="Message"></textarea>
+                        @if (isFieldInvalid('message')) {<div class="errorMessage">Message is required and should be at
+                            least 10 characters long.</div>}
+                        <div class="sendBtn">
+                            <button class="btnDetails" type="submit" [disabled]="contactForm.invalid"><i
+                                    class="fa-solid fa-paper-plane"></i>Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

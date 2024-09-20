@@ -1,0 +1,139 @@
+/* Contact Info */
+.box {
+    background-image: linear-gradient(to right, #6d6c6adb, #6d6c6adb);
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+.contact{
+    padding: 40px 0 40px 0;
+}
+.container{
+    padding: 10px;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.contactDetails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contactLeft{
+    flex-basis: 40%;
+    padding: 15px;
+}
+.contactLeft p{
+    margin-top: 30px;
+}
+.contDetails{
+    display: flex;
+    gap: 10px;
+}
+.socialIcons{
+    margin-top: 30px;
+    display: flex;
+    column-gap: 15px;
+}
+.socialIcons a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #fdd835;
+    display: inline-block;
+}
+.socialIcons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.contactRight{
+    flex-basis: 45%;
+    padding: 30px;
+}
+.contactRight form{
+    display: grid;
+    grid-gap: 5px;
+}
+.contactRight form label{
+    width: 100px;
+}
+.contactRight form input{
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    background: #514a4a;
+    padding: 15px;
+}
+.contactRight form textarea{
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    background: #514a4a;
+    padding: 15px;
+}
+.btnDownload{
+    display: inline-block;
+    margin: 25px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 5px 14px 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    background: #b5a69c;
+}
+.btnDownload:hover{
+    background: #ff004f;
+}
+.sendBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.btnDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    gap: 10px;
+    width: 55%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    background: #afebeb;
+    transition: background 0.5s;
+}
+
+.errorMessage {
+    color: #E6EE9C;
+    font-family: fangsong;
+    font-size: 16px;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 483px){
+    .sub-title{
+        text-align: center;
+        font-size: 8vw;
+    }
+    .contDetails{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .socialIcons{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactLeft{
+        display: grid;
+    }
+}
