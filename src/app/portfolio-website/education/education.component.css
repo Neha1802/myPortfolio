@@ -89,7 +89,7 @@
 }
 @media screen  and (min-width: 289px) and (max-width: 424px) {
     .eduList div h3 {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 @media screen and (min-width: 425px) and (max-width: 1119px){

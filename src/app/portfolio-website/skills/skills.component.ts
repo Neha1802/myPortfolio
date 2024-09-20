@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ResponsiveDirectiveDirective } from '../../responsive-directive.directive';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ResponsiveDirectiveDirective],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })
