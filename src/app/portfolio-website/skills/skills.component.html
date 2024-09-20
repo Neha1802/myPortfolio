@@ -1,16 +1,30 @@
 <div class="box">
-    <div #skills class="skills">
-        <div class="container">
-            <h1 class="sub-title">Skills</h1>
-            <div class="slider-container">
-                <button (click)="previous()" class="arrow left-arrow">&#10094;</button>
-                <div class="slider-card">
-                  <img [src]="images[currentIndex].src" alt="Image" />
-                  <h3>{{ images[currentIndex].title }}</h3>
-                  <p class="description">{{ images[currentIndex].description }}</p>
-                </div>
-                <button (click)="next()" class="arrow right-arrow">&#10095;</button>
-              </div>
+  <div #skills class="skills">
+    <div class="container">
+      <div class="heading">
+        <h1 class="sub-title">Skills</h1>
+      <h1 class="sub-title">Tools</h1>
+      </div>
+      <div class="skillsTools">
+        <div class="slider-container">
+          <button (click)="previousArrow()" class="arrow left-arrow">&#10094;</button>
+          <div class="slider-card">
+            <img [src]="images[currentIndexSkills].src" alt="Image" />
+            <h3>{{ images[currentIndexSkills].title }}</h3>
+            <p class="description">{{ images[currentIndexSkills].description }}</p>
+          </div>
+          <button (click)="nextArrow()" class="arrow right-arrow">&#10095;</button>
         </div>
+        <div class="slider-container">
+          <button (click)="previousArrow2()" class="arrow left-arrow">&#10094;</button>
+          <div class="slider-card">
+            <img [src]="imagesTools[currentIndexTools].src" alt="Image" />
+            <h3>{{ imagesTools[currentIndexTools].title }}</h3>
+            <p class="description">{{ imagesTools[currentIndexTools].description }}</p>
+          </div>
+          <button (click)="nextArrow2()" class="arrow right-arrow">&#10095;</button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
