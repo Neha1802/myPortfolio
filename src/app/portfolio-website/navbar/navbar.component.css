@@ -81,7 +81,7 @@ mat-toolbar-row {
 }
 
 mat-sidenav {
-    width: 100px;
+    width: 20vw;
     background-color: #ecd7d7;
     visibility: visible !important;
     display: block !important;
@@ -98,14 +98,20 @@ mat-nav-list {
 }
 
 mat-nav-list a{
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: bold;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    row-gap: 5px;
+}
+mat-nav-list a i{
+    font-size: 3vw;
 }
 
 mat-nav-list a:hover {
     color: coral;
     cursor: pointer;
-    border: 1px solid grey;
     border-radius: 10px;
     background: #f3cbcb;
     transform: translateY(-3px);
@@ -117,6 +123,7 @@ mat-sidenav-content {
     display: flex;
     flex-direction: column;
 }
+
 
 app-footer {
     margin-top: auto;

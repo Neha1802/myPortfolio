@@ -15,7 +15,7 @@
                     <a (click)="about()">About</a>
                     <a (click)="education()">Education</a>
                     <a (click)="skills()">Skills</a>
-                    <a (click)="workExp()">Work Experience</a>
+                    <a (click)="workExp()">Experience</a>
                     <a (click)="contact()">Contact</a>
                 </div>
             </mat-toolbar-row>
@@ -23,18 +23,18 @@
         <mat-sidenav-container class="sidenav-container">
             <mat-sidenav #snav mode="side">
                 <mat-nav-list>
-                    <a (click)="home()">Home</a>
-                    <a (click)="about()">About</a>
-                    <a (click)="education()">Education</a>
-                    <a (click)="skills()">Skills</a>
-                    <a (click)="workExp()">Work Experience</a>
-                    <a (click)="contact()">Contact</a>
+                    <a (click)="home()"><i class="fa-solid fa-house"></i>Home</a>
+                    <a (click)="about()"><i class="fa-solid fa-address-card"></i>About</a>
+                    <a (click)="education()"><i class="fa-solid fa-school"></i>Education</a>
+                    <a (click)="skills()"><i class="fa-solid fa-toolbox"></i>Skills</a>
+                    <a (click)="workExp()"><i class="fa-solid fa-briefcase"></i>Experience</a>
+                    <a (click)="contact()"><i class="fa-solid fa-address-book"></i>Contact</a>
                 </mat-nav-list>
             </mat-sidenav>
 
             <mat-sidenav-content>
                 <div [@routeTransition]="route.snapshot.data" style="display: contents;">
-                    <router-outlet></router-outlet>
+                    <router-outlet appResponsiveDirective></router-outlet>
                 </div>
                 <app-footer appResponsiveDirective></app-footer>
             </mat-sidenav-content>
