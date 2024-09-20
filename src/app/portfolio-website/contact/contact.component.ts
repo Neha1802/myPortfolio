@@ -26,24 +26,14 @@ export class ContactComponent {
       message: ['', [Validators.required, Validators.minLength(10)]]
     });
 
-      // this.route.fragment.subscribe((fragment) => {
-      //   if (fragment) {
-      //     setTimeout(() => {
-      //       const element = document.getElementById(fragment);
-      //       if (element) {
-      //         element.scrollIntoView({ behavior: 'smooth' });
-      //       }
-      //     }, 0);
-      //   }
-      // });
   }
 
   onSubmit() {
     if (this.contactForm.valid) {
-      this.toastr.success('Form submitted successfully.', 'Success', {closeButton: true, timeOut:1000});
+      this.toastr.success('Form submitted successfully.', 'Success', {closeButton: true, timeOut:2000});
       this.contactForm.reset();
     } else {
-      this.toastr.error('Form is invalid', 'Error', {closeButton: true, timeOut:1000});
+      this.toastr.error('Form is invalid', 'Error', {closeButton: true, timeOut:2000});
     }
   }
   isFieldInvalid(fieldName: string): boolean {
