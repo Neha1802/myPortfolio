@@ -31,6 +31,7 @@ export class SkillsComponent {
 
  
   images = [
+    { src: 'angular.png', title: 'CLI', description: 'Expert in Angular, a framework used to build dynamic and responsive web applications.' },
     { src: 'typeS.jpg', title: 'Typescript', description: 'Used while creating components, services, and directives with strong typing to ensure code reliability and maintainability. ' },
     { src: 'js.png', title: 'Javascript', description: 'Skilled in JavaScript and TpeScript for adding interactivity to web applications.' },
     { src: 'html.png', title: 'HTML', description: 'Proficient in HTML for structuring and organizing web content.' },
@@ -38,7 +39,6 @@ export class SkillsComponent {
     { src: 'rxjs.png', title: 'RxJS', description: 'Used in Angular for managing asynchronous data streams and events.' }
   ];
   imagesTools = [
-    { src: 'angular.png', title: 'CLI', description: 'Expert in Angular, a framework used to build dynamic and responsive web applications. ' },
     { src: 'nodeJs.png', title: 'Node.js', description: 'Used to run the Angular CLI and other development tools. Used npm to manage Angular’s dependencies and 3rd-party libraries.' },
     { src: 'postman.png', title: 'Postman', description: 'Used for testing API endpoints that are consumed by Angular services.' },
     { src: 'netlify.png', title: 'Netlify', description: 'Used for deployment of Angular apps.' },
