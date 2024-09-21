@@ -132,17 +132,7 @@ app-footer {
     z-index: 10;
 }
 
-.toolbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
 /* Responsiveness */
-
-:host.mobile .toolbar{
-    z-index: 10;
-}
 
 :host.desktop .menu-toggle{
     display: none;
