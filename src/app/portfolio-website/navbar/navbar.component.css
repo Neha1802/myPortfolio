@@ -131,6 +131,13 @@ app-footer {
     z-index: 10;
 }
 
+:host.mobile .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 2; /* Ensures it stays on top of other content */
+    background-color: #a5a4a0;
+    width: 100%;
+}
 /* Responsiveness */
 
 :host.desktop .menu-toggle{

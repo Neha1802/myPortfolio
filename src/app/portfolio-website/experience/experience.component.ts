@@ -17,19 +17,6 @@ export class ExperienceComponent {
   exp3: boolean = false;
 
 
-  constructor(private route: ActivatedRoute){
-    this.route.fragment.subscribe((fragment) => {
-      if (fragment) {
-        setTimeout(() => {
-          const element = document.getElementById(fragment);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 0);
-      }
-    });
-  }
-
   showExp1(){
     this.exp1 = true;
     this.exp2 = false;
