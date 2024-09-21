@@ -15,19 +15,6 @@ export class SkillsComponent {
   currentIndexSkills: number = 0;
   currentIndexTools: number = 0;
 
-  constructor(private route: ActivatedRoute){
-    this.route.fragment.subscribe((fragment) => {
-      if (fragment) {
-        setTimeout(() => {
-          const element = document.getElementById(fragment);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 0);
-      }
-    });
-    
-  }
 
  
   images = [
