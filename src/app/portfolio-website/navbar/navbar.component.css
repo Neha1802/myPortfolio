@@ -37,13 +37,13 @@ html {
 .img {
     width: 40px;
 }
-mat-toolbar{
-  position: fixed;
-}
+
 mat-toolbar-row {
     flex-wrap: wrap;
     border: 1px solid #3d3838;
     background-color: #a5a4a0;
+    z-index: 2;
+    position: fixed;
 }
 
 .sectionLinks {
@@ -132,7 +132,17 @@ app-footer {
     z-index: 10;
 }
 
+.toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
 /* Responsiveness */
+
+:host.desktop .toolbar{
+    z-index: 10;
+}
 
 :host.desktop .menu-toggle{
     display: none;
