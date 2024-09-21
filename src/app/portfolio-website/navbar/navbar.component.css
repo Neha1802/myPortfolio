@@ -1,3 +1,4 @@
+
 html {
     scroll-behavior: smooth;
     height: 100%;
@@ -42,8 +43,6 @@ mat-toolbar-row {
     flex-wrap: wrap;
     border: 1px solid #3d3838;
     background-color: #a5a4a0;
-    z-index: 2;
-    position: fixed;
 }
 
 .sectionLinks {
@@ -151,5 +150,3 @@ app-footer {
 :host.desktop mat-nav-list {
     display: none;
 }
-
-
