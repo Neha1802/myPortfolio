@@ -140,7 +140,7 @@ app-footer {
 }
 /* Responsiveness */
 
-:host.desktop .toolbar{
+:host.mobile .toolbar{
     z-index: 10;
 }
 
