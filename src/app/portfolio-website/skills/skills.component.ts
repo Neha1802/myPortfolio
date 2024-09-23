@@ -18,36 +18,30 @@ export class SkillsComponent {
 
  
   images = [
-    { src: 'angular.png', title: 'CLI', description: 'Expert in Angular, a framework used to build dynamic and responsive web applications.' },
-    { src: 'typeS.jpg', title: 'Typescript', description: 'Used while creating components, services, and directives with strong typing to ensure code reliability and maintainability. ' },
-    { src: 'js.png', title: 'Javascript', description: 'Skilled in JavaScript and TpeScript for adding interactivity to web applications.' },
-    { src: 'html.png', title: 'HTML', description: 'Proficient in HTML for structuring and organizing web content.' },
-    { src: 'css.png', title: 'CSS', description: 'Experienced in CSS for designing and styling web pages.' },
-    { src: 'rxjs.png', title: 'RxJS', description: 'Used in Angular for managing asynchronous data streams and events.' }
+    { img: 'angular.png', title: 'CLI', description: 'Expert in Angular, a framework used to build dynamic and responsive web applications.' },
+    { img: 'typeS.jpg', title: 'Typescript', description: 'Used while creating components, services, and directives with strong typing to ensure code reliability and maintainability. ' },
+    { img: 'js.png', title: 'Javascript', description: 'Skilled in JavaScript and TpeScript for adding interactivity to web applications.' },
+    { img: 'html.png', title: 'HTML', description: 'Proficient in HTML for structuring and organizing web content.' },
+    { img: 'css.png', title: 'CSS', description: 'Experienced in CSS for designing and styling web pages.' },
+    { img: 'rxjs.png', title: 'RxJS', description: 'Used in Angular for managing asynchronous data streams and events.' }
   ];
   imagesTools = [
-    { src: 'nodeJs.png', title: 'Node.js', description: 'Used to run the Angular CLI and other development tools. Used npm to manage Angular’s dependencies and 3rd-party libraries.' },
-    { src: 'postman.png', title: 'Postman', description: 'Used for testing API endpoints that are consumed by Angular services.' },
-    { src: 'netlify.png', title: 'Netlify', description: 'Used for deployment of Angular apps.' },
-    { src: 'bitbucket.png', title: 'BitBucket', description: 'Git repository hosting service that allows to manage Angular project. Used to track changes, collaborate with team members.' },
-    { src: 'jira.png', title: 'Jira', description: 'Used for Agile methodologies (Scrum), allowing to manage sprints, backlogs, and track progress using boards and charts.' },
-    { src: 'git.png', title: 'Git', description: 'Proficient in Git for version control and collaboration.' },
-    { src: 'azureDevops.png', title: 'Azure Devops', description: 'Azure Boards helped manage tasks, bugs, and user stories through Agile methodologies.' }
+    { img: 'nodeJs.png', title: 'Node.js', description: 'Used to run the Angular CLI and other development tools. Used npm to manage Angular’s dependencies and 3rd-party libraries.' },
+    { img: 'postman.png', title: 'Postman', description: 'Used for testing API endpoints that are consumed by Angular services.' },
+    { img: 'netlify.png', title: 'Netlify', description: 'Used for deployment of Angular apps.' },
+    { img: 'bitbucket.png', title: 'BitBucket', description: 'Git repository hosting service that allows to manage Angular project. Used to track changes, collaborate with team members.' },
+    { img: 'jira.png', title: 'Jira', description: 'Used for Agile methodologies (Scrum), allowing to manage sprints, backlogs, and track progress using boards and charts.' },
+    { img: 'git.png', title: 'Git', description: 'Proficient in Git for version control and collaboration.' },
+    { img: 'azureDevops.png', title: 'Azure Devops', description: 'Azure Boards helped manage tasks, bugs, and user stories through Agile methodologies.' }
   ];
 
 
   nextArrow() {
-    this.currentIndexSkills++;
-    if (this.currentIndexSkills >= this.images.length) {
-      this.currentIndexSkills = 0;
-    }
+    this.currentIndexSkills = (this.currentIndexSkills + 1) % this.images.length; // Cycle through images
   }
 
   previousArrow() {
-    this.currentIndexSkills--;
-    if (this.currentIndexSkills < 0) {
-      this.currentIndexSkills = this.images.length - 1;
-    }
+    this.currentIndexSkills = (this.currentIndexSkills - 1 + this.images.length) % this.images.length; // Cycle backwards
   }
 
   nextArrow2() {
