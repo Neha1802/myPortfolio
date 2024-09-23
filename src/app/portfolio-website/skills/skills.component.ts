@@ -37,11 +37,17 @@ export class SkillsComponent {
 
 
   nextArrow() {
-    this.currentIndexSkills = (this.currentIndexSkills + 1) % this.images.length; // Cycle through images
+    this.currentIndexSkills++;
+    if (this.currentIndexSkills >= this.images.length) {
+      this.currentIndexSkills = 0;
+    }
   }
 
   previousArrow() {
-    this.currentIndexSkills = (this.currentIndexSkills - 1 + this.images.length) % this.images.length; // Cycle backwards
+    this.currentIndexSkills--;
+    if (this.currentIndexSkills < 0) {
+      this.currentIndexSkills = this.images.length - 1;
+    }
   }
 
   nextArrow2() {
