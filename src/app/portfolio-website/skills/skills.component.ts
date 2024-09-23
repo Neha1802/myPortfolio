@@ -37,33 +37,29 @@ export class SkillsComponent {
 
 
   nextArrow() {
-    if (this.currentIndexSkills < this.images.length - 1) {
-      this.currentIndexSkills++;
-    } else {
+    this.currentIndexSkills++;
+    if (this.currentIndexSkills >= this.images.length) {
       this.currentIndexSkills = 0;
     }
   }
 
   previousArrow() {
-    if (this.currentIndexSkills > 0) {
-      this.currentIndexSkills--;
-    } else {
+    this.currentIndexSkills--;
+    if (this.currentIndexSkills < 0) {
       this.currentIndexSkills = this.images.length - 1;
     }
   }
 
   nextArrow2() {
-    if (this.currentIndexTools < this.imagesTools.length - 1) {
-      this.currentIndexTools++;
-    } else {
+    this.currentIndexTools++;
+    if (this.currentIndexTools >= this.imagesTools.length) {
       this.currentIndexTools = 0;
     }
   }
 
   previousArrow2() {
-    if (this.currentIndexTools > 0) {
-      this.currentIndexTools--;
-    } else {
+    this.currentIndexTools--;
+    if (this.currentIndexTools < 0) {
       this.currentIndexTools = this.imagesTools.length - 1;
     }
   }
