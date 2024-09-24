@@ -5,8 +5,8 @@ import { ExperienceComponent } from '../experience/experience.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { EducationComponent } from '../education/education.component';
 import { ContactComponent } from '../contact/contact.component';
-import { FooterComponent } from '../../footer/footer.component';
 import { ResponsiveDirectiveDirective } from '../../responsive-directive.directive';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',

@@ -7,7 +7,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { EducationComponent } from './education/education.component';
-import { FooterComponent } from '../footer/footer.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path: 'navbar', component: NavbarComponent},

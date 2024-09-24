@@ -18,11 +18,13 @@ export class SkillsComponent {
 
  
   images = [
-    { img: 'angular.png', title: 'CLI', description: 'Expert in Angular, a framework used to build dynamic and responsive web applications.' },
+    { img: 'angular.png', title: 'CLI', description: 'Framework used to build dynamic and responsive web applications.' },
+    { img: 'reactLogo.png', title: 'React', description: 'I have experience in developing dynamic and responsive user interfaces using React.' },
     { img: 'typeS.jpg', title: 'Typescript', description: 'Used while creating components, services, and directives with strong typing to ensure code reliability and maintainability. ' },
     { img: 'js.png', title: 'Javascript', description: 'Skilled in JavaScript and TpeScript for adding interactivity to web applications.' },
     { img: 'html.png', title: 'HTML', description: 'Proficient in HTML for structuring and organizing web content.' },
     { img: 'css.png', title: 'CSS', description: 'Experienced in CSS for designing and styling web pages.' },
+    { img: 'tailwind.png', title: 'Tailwind', description: 'Used this css to create highly customizable, responsive, and modern web designs.' },
     { img: 'rxjs.png', title: 'RxJS', description: 'Used in Angular for managing asynchronous data streams and events.' }
   ];
   imagesTools = [

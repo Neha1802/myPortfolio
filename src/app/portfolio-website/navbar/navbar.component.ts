@@ -9,8 +9,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { routeTransition } from '../../routeTransition';
-import { FooterComponent } from '../../footer/footer.component';
 import { ResponsiveDirectiveDirective } from '../../responsive-directive.directive';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-navbar',
